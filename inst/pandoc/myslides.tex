@@ -1,0 +1,53 @@
+\documentclass[10pt, xetex]{beamer}
+
+\usetheme{Berlin}
+\usecolortheme{beaver}
+
+\usepackage{fontspec}
+\usepackage{eurosym}
+
+
+\usepackage{upquote}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+
+\title{$title$}
+\author{$author$}
+\date{$date$}
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+
+\AtBeginSection[]
+{
+  \begin{frame}[plain]
+    \sectionpage
+  \end{frame}
+}
+\AtBeginSubsection[]
+{
+  \begin{frame}[plain]
+    \subsectionpage
+  \end{frame}
+}
+
+
+\begin{document}
+
+\setbeamertemplate{firstpage}{}
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\setbeamertemplate{firstpage}{no}
+\begin{frame}
+  \frametitle{Summary}
+  \tableofcontents
+\end{frame}
+
+$body$
+
+\end{document}

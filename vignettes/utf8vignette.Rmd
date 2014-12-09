@@ -1,0 +1,31 @@
+---
+title: "Markdown vignette with UTF-8 encoding"
+author: "Thierry Onkelinx"
+date: "2014-12-09"
+output: 
+  utf8vignette::my_slides
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Markdown vignette with UTF-8 encoding}
+  %\VignetteEncoding{UTF-8}
+  \usepackage[utf8]{inputenc}
+---
+
+# Test section
+
+## UTF-8 characters
+
+$£€ âêîûô äëïöüÿ áéíóúý àèìòù ãñ çµ
+
+## Script
+
+```{r render_script, eval = FALSE, echo = TRUE}
+library(rmarkdown)
+render(
+  "utf8vignette.Rmd", 
+  output_format = "utf8vignette::my_slides", 
+  output_file = "slides.pdf",
+  encoding = "UTF-8"
+)
+knitr::purl("utf8vignette.Rmd", output = "script.R")
+```

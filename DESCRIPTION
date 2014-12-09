@@ -1,0 +1,14 @@
+Package: utf8vignette
+Type: Package
+Title: Minimal working example of UTF-8 markdown vignette
+Version: 0.1
+Date: 2014-12-08
+Author: Thierry Onkelinx
+Maintainer: Thierry Onkelinx <thierry.onkelinx@inbo.be>
+Description: It does nothing
+License: CC0
+VignetteBuilder: knitr
+Suggests:
+    knitr
+Imports:
+    rmarkdown
